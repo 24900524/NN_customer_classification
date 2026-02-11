@@ -34,8 +34,8 @@ Test the model with new sample data for prediction.
 
 ## PROGRAM
 
-### Name: NAUSHEEN FATHIMA A
-### Register Number: 212224230179
+### Name: DHARSHINI S N
+### Register Number: 212224230062
 
 ```python
 class PeopleClassifier(nn.Module):
@@ -47,15 +47,12 @@ class PeopleClassifier(nn.Module):
         self.fc4 = nn.Linear(8, 4)
 
 
-
     def forward(self, x):
          x=F.relu(self.fc1(x))
         x=F.relu(self.fc2(x))
         x=F.relu(self.fc3(x))
         x=self.fc4(x)
         return x
-
-        
 
 ```
 ```python
@@ -121,8 +118,6 @@ print(f'Predicted class for sample input: {predicted_class_label}')
 print(f'Actual class for sample input: {label_encoder.inverse_transform([y_test[12].item()])[0]}')
 
 ```
-
-
 
 ## Dataset Information
 
