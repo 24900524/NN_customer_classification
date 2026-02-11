@@ -111,9 +111,10 @@ plt.show()
 sample_input = X_test[12].clone().unsqueeze(0).detach().type(torch.float32)
 with torch.no_grad():
     output = model(sample_input)
-    # Select the prediction for the sample (first element)
-    predicted_class_index = torch.argmax(output[0]).item()
-    predicted_class_label = label_encoder.inverse_transform([predicted_class_index])[0]
+
+# Select the prediction for the sample (first element)
+predicted_class_index = torch.argmax(output[0]).item()
+predicted_class_label = label_encoder.inverse_transform([predicted_class_index])[0]
 print("Name: DHARSHINI S N")
 print("Register No: 212224230062")
 print(f'Predicted class for sample input: {predicted_class_label}')
